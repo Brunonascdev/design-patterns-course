@@ -1,7 +1,7 @@
-import { MyDatabaseClassic } from './db/my-database-classic';
-import './module_a';
+import { MyDatabaseFunction } from './db/my-database-function';
+import { mydb as mydbfromA } from './module_a';
 
-const mydb = MyDatabaseClassic.getInstance();
+const mydb = MyDatabaseFunction;
 
 mydb.add({
   name: 'Robert',
@@ -13,3 +13,5 @@ mydb.add({
 });
 
 mydb.show();
+
+console.log(mydb === mydbfromA);

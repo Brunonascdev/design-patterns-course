@@ -1,6 +1,6 @@
-import { MyDatabaseClassic } from './db/my-database-classic';
+import { MyDatabaseFunction } from './db/my-database-function';
 
-const mydb = MyDatabaseClassic.getInstance();
+const mydb = MyDatabaseFunction;
 
 mydb.add({
   name: 'John',
@@ -14,3 +14,5 @@ mydb.add({
   name: 'Edu',
   age: 30,
 });
+
+export { mydb };
